@@ -1,0 +1,203 @@
+/* ClearRead Content Script Styles */
+
+/* Floating analyze split button */
+.clearread-split-btn {
+  position: absolute;
+  z-index: 2147483647;
+  display: flex;
+  align-items: stretch;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(4px);
+  animation: clearread-fadein 0.15s ease forwards;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.clearread-split-main {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background: #2563eb;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.clearread-split-main:hover {
+  background: #1d4ed8;
+}
+
+.clearread-split-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  padding: 0;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 8px 8px 0;
+  background: #2563eb;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.clearread-split-chevron:hover {
+  background: #1d4ed8;
+}
+
+/* Engine dropdown menu */
+.clearread-engine-dropdown {
+  position: absolute;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+  border-radius: 8px;
+  background: #1e293b;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  opacity: 0;
+  animation: clearread-fadein 0.1s ease forwards;
+}
+
+.clearread-engine-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.1s ease;
+}
+
+.clearread-engine-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.clearread-engine-option + .clearread-engine-option {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Legacy single button - keep for backward compat */
+.clearread-analyze-btn {
+  position: absolute;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.15s ease, opacity 0.2s ease, transform 0.15s ease;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: clearread-fadein 0.15s ease forwards;
+  white-space: nowrap;
+}
+
+@keyframes clearread-fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.clearread-analyze-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Inline fallacy underline */
+.clearread-highlight {
+  border-bottom: 2px solid var(--clearread-color, #e74c3c);
+  background-color: color-mix(in srgb, var(--clearread-color, #e74c3c) 10%, transparent);
+  cursor: help;
+  position: relative;
+  transition: background-color 0.15s ease;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+.clearread-highlight:hover {
+  background-color: color-mix(in srgb, var(--clearread-color, #e74c3c) 20%, transparent);
+}
+
+/* Tooltip */
+.clearread-tooltip {
+  position: absolute;
+  z-index: 2147483647;
+  max-width: 360px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #f1f5f9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  opacity: 0;
+  animation: clearread-fadein 0.15s ease forwards;
+}
+
+.clearread-tooltip-card {
+  margin-bottom: 8px;
+}
+
+.clearread-tooltip-card:last-child {
+  margin-bottom: 0;
+}
+
+.clearread-tooltip-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #93c5fd;
+  font-size: 14px;
+}
+
+.clearread-tooltip-explanation {
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.clearread-tooltip-confidence {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.clearread-tooltip-link {
+  display: inline-block;
+  margin-top: 6px;
+  margin-left: 8px;
+  font-size: 11px;
+  color: #60a5fa;
+  text-decoration: underline;
+}

@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Build output
+extension/dist/
+model/output/
+model/output_v2/
+model/output_v3/
+model/output_claim_detector/
+
+# Bundled model files (large binaries)
+extension/public/model/
+extension/public/claim_model/
+
+# Data files (large)
+model/data/raw/
+model/data/processed/
+
+# Lock files
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local

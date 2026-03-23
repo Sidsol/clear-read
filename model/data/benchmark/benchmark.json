@@ -1,0 +1,433 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "description": "ClearRead evaluation benchmark — gold-standard annotated passages for cross-model comparison",
+    "created": "2026-03-20",
+    "categories": {
+      "clear_fallacy": "Textbook examples that should be confidently detected",
+      "multi_technique": "Passages containing multiple rhetorical techniques",
+      "clean_text": "Legitimate writing that should NOT be flagged",
+      "subtle": "Borderline cases — reasonable people may disagree"
+    }
+  },
+  "passages": [
+    {
+      "id": "cf-01",
+      "category": "clear_fallacy",
+      "text": "You can't trust Dr. Martinez's research on climate policy. She was caught cheating on her taxes three years ago.",
+      "expected_detections": [
+        {
+          "technique": "ad_hominem",
+          "snippet": "You can't trust Dr. Martinez's research on climate policy. She was caught cheating on her taxes three years ago.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-02",
+      "category": "clear_fallacy",
+      "text": "Either you support the new surveillance bill, or you don't care about national security. There's no middle ground here.",
+      "expected_detections": [
+        {
+          "technique": "false_dichotomy",
+          "snippet": "Either you support the new surveillance bill, or you don't care about national security. There's no middle ground here.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-03",
+      "category": "clear_fallacy",
+      "text": "Ever since we started putting fluoride in the water, autism rates have gone up. Clearly fluoride is causing autism.",
+      "expected_detections": [
+        {
+          "technique": "post_hoc",
+          "snippet": "Ever since we started putting fluoride in the water, autism rates have gone up. Clearly fluoride is causing autism.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-04",
+      "category": "clear_fallacy",
+      "text": "Millions of people believe in astrology, so there must be something to it. That many people can't all be wrong.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_popular_opinion",
+          "snippet": "Millions of people believe in astrology, so there must be something to it. That many people can't all be wrong.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-05",
+      "category": "clear_fallacy",
+      "text": "My neighbor got the flu vaccine and then got sick the next week. That proves vaccines don't work and probably make you sicker.",
+      "expected_detections": [
+        {
+          "technique": "anecdotal_evidence",
+          "snippet": "My neighbor got the flu vaccine and then got sick the next week. That proves vaccines don't work and probably make you sicker.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-06",
+      "category": "clear_fallacy",
+      "text": "The CEO says our company's environmental record is excellent, so we clearly don't need to worry about pollution.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_authority",
+          "snippet": "The CEO says our company's environmental record is excellent, so we clearly don't need to worry about pollution.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-07",
+      "category": "clear_fallacy",
+      "text": "If we allow students to use calculators in math class, they'll never learn arithmetic. Then they won't be able to do basic tasks. Eventually our entire education system will collapse.",
+      "expected_detections": [
+        {
+          "technique": "slippery_slope",
+          "snippet": "If we allow students to use calculators in math class, they'll never learn arithmetic. Then they won't be able to do basic tasks. Eventually our entire education system will collapse.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-08",
+      "category": "clear_fallacy",
+      "text": "We were discussing the budget deficit, but what about the real issue here — the fact that politicians get paid too much? Let's focus on what really matters.",
+      "expected_detections": [
+        {
+          "technique": "red_herring",
+          "snippet": "We were discussing the budget deficit, but what about the real issue here — the fact that politicians get paid too much? Let's focus on what really matters.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-09",
+      "category": "clear_fallacy",
+      "text": "Organic food is natural, so it must be healthier for you. Anything made with chemicals and artificial ingredients can't be good for the human body.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_nature",
+          "snippet": "Organic food is natural, so it must be healthier for you. Anything made with chemicals and artificial ingredients can't be good for the human body.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-10",
+      "category": "clear_fallacy",
+      "text": "Vegetarians say they care about animal suffering, but I know a vegetarian who wears leather shoes. No real vegetarian would do that, so their whole movement is hypocritical.",
+      "expected_detections": [
+        {
+          "technique": "no_true_scotsman",
+          "snippet": "No real vegetarian would do that, so their whole movement is hypocritical.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-11",
+      "category": "clear_fallacy",
+      "text": "Sure, Senator Williams claims to support working families, but he was endorsed by the same PAC that funded extremist candidates in three other states.",
+      "expected_detections": [
+        {
+          "technique": "guilt_by_association",
+          "snippet": "Sure, Senator Williams claims to support working families, but he was endorsed by the same PAC that funded extremist candidates in three other states.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-12",
+      "category": "clear_fallacy",
+      "text": "These radical activists want to completely destroy our way of life. Their dangerous agenda threatens everything we hold dear — our families, our freedom, our future.",
+      "expected_detections": [
+        {
+          "technique": "loaded_language",
+          "snippet": "These radical activists want to completely destroy our way of life. Their dangerous agenda threatens everything we hold dear — our families, our freedom, our future.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-13",
+      "category": "clear_fallacy",
+      "text": "You say the economy needs reform, but your party was in charge for eight years and did nothing. You have no right to talk about economic policy.",
+      "expected_detections": [
+        {
+          "technique": "whataboutism",
+          "snippet": "You say the economy needs reform, but your party was in charge for eight years and did nothing. You have no right to talk about economic policy.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-14",
+      "category": "clear_fallacy",
+      "text": "Nobody has ever proven that ghosts don't exist. Until someone can definitively disprove them, we have to accept that they're real.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_ignorance",
+          "snippet": "Nobody has ever proven that ghosts don't exist. Until someone can definitively disprove them, we have to accept that they're real.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "cf-15",
+      "category": "clear_fallacy",
+      "text": "This proposal would lead to catastrophic consequences. Imagine children going hungry, hospitals closing, entire communities abandoned. Is that really what we want?",
+      "expected_detections": [
+        {
+          "technique": "fear_mongering",
+          "snippet": "This proposal would lead to catastrophic consequences. Imagine children going hungry, hospitals closing, entire communities abandoned. Is that really what we want?",
+          "confidence": "high"
+        }
+      ]
+    },
+
+    {
+      "id": "mt-01",
+      "category": "multi_technique",
+      "text": "Every scientist I've talked to says this theory is correct. And if you disagree, you're probably just one of those anti-science extremists who wants to take us back to the Dark Ages.",
+      "expected_detections": [
+        {
+          "technique": "anecdotal_evidence",
+          "snippet": "Every scientist I've talked to says this theory is correct.",
+          "confidence": "high"
+        },
+        {
+          "technique": "ad_hominem",
+          "snippet": "you're probably just one of those anti-science extremists",
+          "confidence": "high"
+        },
+        {
+          "technique": "slippery_slope",
+          "snippet": "who wants to take us back to the Dark Ages",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "mt-02",
+      "category": "multi_technique",
+      "text": "Our grandparents didn't need therapy and they turned out fine. These snowflake millennials just need to toughen up. As my pastor always says, hard work cures everything.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_tradition",
+          "snippet": "Our grandparents didn't need therapy and they turned out fine.",
+          "confidence": "high"
+        },
+        {
+          "technique": "name_calling",
+          "snippet": "These snowflake millennials just need to toughen up.",
+          "confidence": "high"
+        },
+        {
+          "technique": "appeal_to_authority",
+          "snippet": "As my pastor always says, hard work cures everything.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "mt-03",
+      "category": "multi_technique",
+      "text": "The opposition wants open borders — they want criminals flooding into our neighborhoods. Meanwhile, they criticize our immigration plan, but where was their solution when they were in power? They talk about 'compassion' and 'human rights' but those are just empty words.",
+      "expected_detections": [
+        {
+          "technique": "straw_man",
+          "snippet": "The opposition wants open borders — they want criminals flooding into our neighborhoods.",
+          "confidence": "high"
+        },
+        {
+          "technique": "fear_mongering",
+          "snippet": "they want criminals flooding into our neighborhoods",
+          "confidence": "high"
+        },
+        {
+          "technique": "whataboutism",
+          "snippet": "where was their solution when they were in power?",
+          "confidence": "high"
+        },
+        {
+          "technique": "glittering_generalities",
+          "snippet": "'compassion' and 'human rights'",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "mt-04",
+      "category": "multi_technique",
+      "text": "I'm just a regular person like you, not some elitist politician. I grew up on a farm, went to public school. That's why I know that this common-sense reform is what real Americans want. Seventy percent of voters agree with me.",
+      "expected_detections": [
+        {
+          "technique": "plain_folks",
+          "snippet": "I'm just a regular person like you, not some elitist politician. I grew up on a farm, went to public school.",
+          "confidence": "high"
+        },
+        {
+          "technique": "glittering_generalities",
+          "snippet": "common-sense reform",
+          "confidence": "medium"
+        },
+        {
+          "technique": "appeal_to_popular_opinion",
+          "snippet": "Seventy percent of voters agree with me.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "mt-05",
+      "category": "multi_technique",
+      "text": "Studies show that 9 out of 10 dentists recommend our toothpaste. Celebrity smile ambassador Jake Rivera uses it every day. Don't you want a brighter, more confident smile? Choose SmileBright — because you deserve the best.",
+      "expected_detections": [
+        {
+          "technique": "appeal_to_authority",
+          "snippet": "Studies show that 9 out of 10 dentists recommend our toothpaste.",
+          "confidence": "medium"
+        },
+        {
+          "technique": "testimonial",
+          "snippet": "Celebrity smile ambassador Jake Rivera uses it every day.",
+          "confidence": "high"
+        },
+        {
+          "technique": "sloganeering",
+          "snippet": "because you deserve the best",
+          "confidence": "medium"
+        }
+      ]
+    },
+
+    {
+      "id": "ct-01",
+      "category": "clean_text",
+      "text": "According to a 2024 study published in The Lancet, regular moderate exercise was associated with a 15% reduction in cardiovascular risk among adults aged 40-65. The researchers noted several limitations, including the observational nature of the study and potential confounding variables.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-02",
+      "category": "clean_text",
+      "text": "The city council voted 7-4 to approve the new zoning ordinance. Supporters argued it would increase affordable housing, while opponents raised concerns about traffic congestion and the impact on existing neighborhoods. A public comment period will be held next month.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-03",
+      "category": "clean_text",
+      "text": "Tesla reported quarterly revenue of $25.2 billion, up 9% from the same period last year. The company attributed the growth to increased deliveries of the Model Y and expansion into new markets. Analysts had expected revenue of $24.8 billion.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-04",
+      "category": "clean_text",
+      "text": "The recipe calls for two cups of flour, one cup of sugar, three eggs, and a teaspoon of vanilla extract. Mix the dry ingredients first, then add the wet ingredients gradually. Bake at 350 degrees for 25-30 minutes.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-05",
+      "category": "clean_text",
+      "text": "I believe the proposed tax reform has significant drawbacks. The independent Congressional Budget Office estimates it would add $1.4 trillion to the deficit over ten years, and the benefits are disproportionately concentrated among high-income earners. However, supporters make a reasonable point that simplifying the tax code could reduce compliance costs.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-06",
+      "category": "clean_text",
+      "text": "Dr. Sarah Chen, a leading epidemiologist at Johns Hopkins, recommends that people over 65 get their annual flu shot before October. Her recommendation is based on data showing that early vaccination provides better protection during peak flu season.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-07",
+      "category": "clean_text",
+      "text": "Is this really the best use of taxpayer money? The bridge repair project has gone $40 million over budget and is two years behind schedule. An independent audit found multiple instances of contractor mismanagement.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-08",
+      "category": "clean_text",
+      "text": "The unemployment rate fell to 3.7% in November, the lowest level in 50 years. However, economists caution that this number doesn't capture underemployment or those who have stopped looking for work. Wage growth remains modest at 2.3% annually.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-09",
+      "category": "clean_text",
+      "text": "While some argue that increasing the minimum wage will lead to job losses, recent research from the University of Washington suggests the effects are more nuanced. Their study of Seattle's minimum wage increase found modest employment reductions among low-wage workers but significant income gains for those who remained employed.",
+      "expected_detections": []
+    },
+    {
+      "id": "ct-10",
+      "category": "clean_text",
+      "text": "Like the Marshall Plan after World War II, this infrastructure investment aims to rebuild critical systems during a period of economic transition — though the two situations differ in important ways, including the scale of destruction and the geopolitical context.",
+      "expected_detections": []
+    },
+
+    {
+      "id": "sb-01",
+      "category": "subtle",
+      "text": "The mayor's office points to a 12% decrease in reported crimes as evidence that their policing strategy is working. Critics note that changes in reporting methodology were implemented during the same period.",
+      "expected_detections": [
+        {
+          "technique": "cherry_picking",
+          "snippet": "The mayor's office points to a 12% decrease in reported crimes as evidence that their policing strategy is working.",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "id": "sb-02",
+      "category": "subtle",
+      "text": "Supporters of the policy describe it as 'streamlining regulations' while opponents call it 'gutting consumer protections.' The bill would eliminate 14 of 23 existing oversight requirements.",
+      "expected_detections": [
+        {
+          "technique": "euphemism_dysphemism",
+          "snippet": "Supporters of the policy describe it as 'streamlining regulations' while opponents call it 'gutting consumer protections.'",
+          "confidence": "low"
+        }
+      ]
+    },
+    {
+      "id": "sb-03",
+      "category": "subtle",
+      "text": "I'm not saying the senator is corrupt, but it's interesting that his biggest donors all received government contracts within months of his election. I'll let the readers draw their own conclusions.",
+      "expected_detections": [
+        {
+          "technique": "innuendo",
+          "snippet": "I'm not saying the senator is corrupt, but it's interesting that his biggest donors all received government contracts within months of his election. I'll let the readers draw their own conclusions.",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "id": "sb-04",
+      "category": "subtle",
+      "text": "Both sides have valid points on climate policy. The scientific community says urgent action is needed, while industry groups say the economic costs are too high. The truth is probably somewhere in the middle.",
+      "expected_detections": [
+        {
+          "technique": "false_equivalence",
+          "snippet": "Both sides have valid points on climate policy. The scientific community says urgent action is needed, while industry groups say the economic costs are too high. The truth is probably somewhere in the middle.",
+          "confidence": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sb-05",
+      "category": "subtle",
+      "text": "This proposed law would protect families and defend our values. It's time we stood up for what's right and put common sense back into government.",
+      "expected_detections": [
+        {
+          "technique": "glittering_generalities",
+          "snippet": "This proposed law would protect families and defend our values. It's time we stood up for what's right and put common sense back into government.",
+          "confidence": "medium"
+        }
+      ]
+    }
+  ]
+}

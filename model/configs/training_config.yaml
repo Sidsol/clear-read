@@ -1,0 +1,21 @@
+model_name: distilroberta-base
+num_labels: 10
+max_length: 256
+batch_size: 16
+learning_rate: 2e-5
+epochs: 5
+warmup_ratio: 0.1
+weight_decay: 0.01
+evaluation_strategy: epoch
+metric_for_best_model: f1_macro
+label_names:
+  - straw_man
+  - begging_the_question
+  - ad_hominem
+  - post_hoc
+  - false_dichotomy
+  - equivocation
+  - appeal_to_authority
+  - hasty_generalization
+  - appeal_to_popular_opinion
+  - red_herring

@@ -1,0 +1,58 @@
+# V3 Model Training Config — DeBERTa-v3-large
+# Upgrade from DistilRoBERTa to DeBERTa-v3-large for improved accuracy
+# Uses same expanded 41-category taxonomy and v2 training data
+
+model_name: microsoft/deberta-v3-large
+num_labels: 41
+max_length: 256
+batch_size: 4
+gradient_accumulation_steps: 4
+learning_rate: 1e-5
+epochs: 6
+warmup_ratio: 0.1
+weight_decay: 0.01
+evaluation_strategy: epoch
+metric_for_best_model: f1_macro
+
+label_names:
+  - straw_man
+  - begging_the_question
+  - ad_hominem
+  - post_hoc
+  - false_dichotomy
+  - equivocation
+  - appeal_to_authority
+  - hasty_generalization
+  - appeal_to_popular_opinion
+  - red_herring
+  - appeal_to_emotion
+  - whataboutism
+  - loaded_language
+  - slippery_slope
+  - loaded_question
+  - false_equivalence
+  - circular_reasoning
+  - false_analogy
+  - appeal_to_ignorance
+  - appeal_to_nature
+  - appeal_to_tradition
+  - no_true_scotsman
+  - guilt_by_association
+  - cherry_picking
+  - genetic_fallacy
+  - composition_division
+  - anecdotal_evidence
+  - appeal_to_consequence
+  - shifting_burden_of_proof
+  - glittering_generalities
+  - plain_folks
+  - transfer
+  - testimonial
+  - name_calling
+  - scapegoating
+  - fear_mongering
+  - dog_whistle
+  - innuendo
+  - projection
+  - sloganeering
+  - euphemism_dysphemism
